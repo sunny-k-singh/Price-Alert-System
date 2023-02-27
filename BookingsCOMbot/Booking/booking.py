@@ -2,7 +2,7 @@ from selenium import webdriver
 import Booking.constants as const
 from selenium.webdriver.common.by import By
 import time
-
+# from Booking.bookingFiltration import BookingFiltration
 
 
 
@@ -56,6 +56,7 @@ class Booking(webdriver.Chrome):
 
     def choose_people(self,count=1):
 
+        count=int(count)
         my_element = self.find_element(By.CSS_SELECTOR, 'button[data-testid="occupancy-config"]')
         my_element.click()
         my_element = self.find_elements(By.CSS_SELECTOR, "span.b9def0936d")[1]
@@ -76,7 +77,10 @@ class Booking(webdriver.Chrome):
         my_element = self.find_element(By.CSS_SELECTOR, f'button[data-id="{sort}"]')
         my_element.click()
             
-                    
+    # def applyFilter(self):
+    #    filter=BookingFiltration(driver=self)
+    #    filter.sort_rooms(sort="")
+
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         if self.teardown:

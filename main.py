@@ -33,5 +33,7 @@ progress_element=driver.find_element(By.CLASS_NAME, "progress-label")
 print(f"{progress_element.text}")
 
 second_element=driver.find_elements(By.CSS_SELECTOR,"button.ui-button")[2]
-print("secondClick", second_element.text)
 second_element.click()
+
+time.sleep(2)
+driver.quit()

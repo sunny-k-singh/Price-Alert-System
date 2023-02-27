@@ -12,7 +12,14 @@
 git clone https://github.com/sunny-k-singh/SeleniumProject.git
 ```
 
-- Then go into BookingsCOMbot folder > Bookings > booking.py and edit the driver path to the path of your downloaded chromedriver. This will edit the ` $PATH` to include the path to the webdriver.
+- Then go into BookingsCOMbot folder > Bookings > booking.py and edit the driver path to the path of your downloadged chromedriver. This will edit the ` $PATH` to include the path to the webdriver.
+
+- Install the package requirements:
+
+```
+pip install -r requirements.txt
+```
+
 - Then simply execute:
 
 ```

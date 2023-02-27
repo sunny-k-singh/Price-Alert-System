@@ -11,8 +11,9 @@ if __name__=='__main__':
     start_date=sys.argv[2]
     end_date=sys.argv[3]
     count=sys.argv[4]
+    sort=sys.argv[5]
 
-    print(destination,start_date,end_date,count)
+    # print(destination,start_date,end_date,count)
     with Booking() as bot:
         bot.land_first_page() #after python crosses this indentation in with
         #it will create some teardown action. The __exit__ method will be called
@@ -37,4 +38,4 @@ if __name__=='__main__':
         except Exception as e:
             print("Choose people didn't work!!, Exception is: ",e)       
 
-        bot.sort_rooms(sort="price")    
+        bot.sort_rooms(sort)    
